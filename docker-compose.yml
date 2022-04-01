@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+
+  cloud-weather-postgres:
+    image: debezium/postgres:13-alpine
+    environment:
+      - POSTGRES_DATABASE=cloud_weather_dev
+      - POSTGRES_USER=cloud_weather_dev
+      - POSTGRES_PASSWORD=cloud_weather_dev_pass
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-data:/data/db
+    networks:
+      - postgres-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=cloud@weather.dev
+      - PGADMIN_DEFAULT_PASSWORD=cloudpass
+    ports:
+      - 15432:80
+    networks:
+      - postgres-network
+
+volumes:
+  postgres-data:
+
+networks:
+  postgres-network:
+    driver: bridge
