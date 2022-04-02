@@ -8,6 +8,6 @@
         public decimal AverageLowF { get; set; }
         public decimal RainfallTotalInches { get; set; }
         public decimal SnowTotalInches { get; set; }
-        public string ZipCode { get; set; }
+        public string ZipCode { get; set; } = string.Empty;
     }
 }
