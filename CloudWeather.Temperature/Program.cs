@@ -13,7 +13,7 @@ builder.Services.AddDbContext<TemperatureDbContext>(opts =>
 
 var app = builder.Build();
 
-const string baseRoute = "/temperature";
+const string baseRoute = "/observation";
 
 app.MapGet($"{baseRoute}/{{zip}}", async (string zip, [FromQuery] int? days, TemperatureDbContext db) =>
 {
@@ -25,12 +25,12 @@ app.MapGet($"{baseRoute}/{{zip}}", async (string zip, [FromQuery] int? days, Tem
     return Results.Ok(results);
 });
 
-app.MapPost(baseRoute, async (TemperaturePostModel model, TemperatureDbContext db) => 
+app.MapPost(baseRoute, async ([FromBody]TemperaturePostModel model, [FromServices]TemperatureDbContext db) => 
 {
     var temperature = new Temperature(model);
     await db.AddAsync(temperature);
     await db.SaveChangesAsync();
-    return Results.CreatedAtRoute($"{baseRoute}/{temperature.ZipCode}", temperature);
+    return Results.Created($"{baseRoute}/{temperature.ZipCode}", temperature);
 });
 
 app.Run();

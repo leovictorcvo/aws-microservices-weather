@@ -59,9 +59,10 @@ async Task<List<int>> PostTemperatureAsync(string zip, DateTime day, HttpClient 
 
     var temperatureResponse = await temperatureHttpClient.PostAsJsonAsync("observation", temperatureObservation);
 
+    Console.WriteLine($"Posted Temperature => Date: {day:d} - Zip: {zip} - Lo (F): {hiLoTemps[0]} - Hi (F):{hiLoTemps[1]}");
     if (temperatureResponse.IsSuccessStatusCode)
     {
-        Console.WriteLine($"Posted Temperature => Date: {day:d} - Zip: {zip} - Lo (F): {hiLoTemps[0]} - Hi (F):{hiLoTemps[1]}");
+        Console.WriteLine("Post Ok");
     }
     else
     {
@@ -88,9 +89,10 @@ async Task PostPrecipitationAsync(int tempLow, string zip, DateTime day, HttpCli
 
     var preciptationResponse = await precipitationHttpClient.PostAsJsonAsync("observation", preciptation);
 
+    Console.WriteLine($"Posted Preciptation => Date: {day:d} - Zip: {zip} - Type: {weatherType} - Amount(in.):{preciptationInches}");
     if (preciptationResponse.IsSuccessStatusCode)
     {
-        Console.WriteLine($"Posted Preciptation => Date: {day:d} - Zip: {zip} - Type: {weatherType} - Amount(in.):{preciptationInches}");
+        Console.WriteLine("Post Ok");
     }
     else
     {

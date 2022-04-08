@@ -8,10 +8,14 @@
         public decimal TempLowF { get; set; }
         public string ZipCode { get; set; } = string.Empty;
 
+        public Temperature()
+        {
+
+        }
         public Temperature(TemperaturePostModel model)
         {
             Id = model.Id;
-            CreatedOn = DateTime.Now.ToUniversalTime();
+            CreatedOn = model.CreatedOn.ToUniversalTime();
             TempHighF = model.TempHighF;
             TempLowF = model.TempLowF;
             ZipCode = model.ZipCode;

@@ -8,6 +8,10 @@
         public string WeatherType { get; set; }
         public string ZipCode { get; set; }
 
+        public Precipitation()
+        {
+
+        }
         public Precipitation(PrecipitationPostModel model)
         {
             Id = model.Id;

@@ -30,7 +30,7 @@ app.MapPost(baseRoute, async (PrecipitationPostModel model, PrecipitationDbConte
     var precipitation = new Precipitation(model);
     await db.AddAsync(precipitation);
     await db.SaveChangesAsync();
-    return Results.CreatedAtRoute($"{baseRoute}/{precipitation.ZipCode}", precipitation);
+    return Results.Created($"{baseRoute}/{precipitation.ZipCode}", precipitation);
 });
 
 app.Run();
