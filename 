@@ -1,0 +1,59 @@
+[33mcommit bbe94734b7bdbc673d103858e58480431af2a865[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Leonardo Victor Soares Medeiros <leovictorcvo@gmail.com>
+Date:   Fri Apr 8 08:27:19 2022 -0300
+
+    BugFixes
+
+[33mcommit a51be6dcb9747d77cd38600bae2795e85f23d9ec[m
+Author: Leonardo Victor Soares Medeiros <leovictorcvo@gmail.com>
+Date:   Thu Apr 7 08:41:53 2022 -0300
+
+    Changed to copy appsettings to output on build
+
+[33mcommit 031ad5d027fb4c0f02b76f618adba7ee9925e9d4[m
+Author: Leonardo Victor Soares Medeiros <leovictorcvo@gmail.com>
+Date:   Thu Apr 7 08:36:58 2022 -0300
+
+    Build Initial Data Loader
+
+[33mcommit dae00c67a891190261b8322a9e5d7df67476393e[m
+Author: Leonardo Victor Soares Medeiros <leovictorcvo@gmail.com>
+Date:   Sat Apr 2 16:06:55 2022 -0300
+
+    Add weather report microservice logic
+
+[33mcommit 4828f4938fc568559cb10e8a4e9a6b55a183f342[m
+Author: Leonardo Victor Soares Medeiros <leovictorcvo@gmail.com>
+Date:   Sat Apr 2 14:19:40 2022 -0300
+
+    Created Post Method
+
+[33mcommit 708d8cdd21ad2f4f1ce41dffb7d1542167f82ca0[m
+Author: Leonardo Victor Soares Medeiros <leovictorcvo@gmail.com>
+Date:   Fri Apr 1 08:28:34 2022 -0300
+
+    add data access to weather report service
+
+[33mcommit 63d62ce583d28233f9791b4cd1c74ebf4bea3353[m
+Author: Leonardo Victor Soares Medeiros <leovictorcvo@gmail.com>
+Date:   Fri Apr 1 08:17:26 2022 -0300
+
+    add data access to temperature service
+
+[33mcommit 1528f5e319d5b1db853481739feb739fabe48169[m
+Author: Leonardo Victor Soares Medeiros <leovictorcvo@gmail.com>
+Date:   Fri Apr 1 08:03:09 2022 -0300
+
+    add data access to precipitation service
+
+[33mcommit c6f54c3b8d22f161a0ebf0d3bdcd446cee92d71c[m
+Author: Leonardo Victor Soares Medeiros <leovictorcvo@gmail.com>
+Date:   Tue Mar 29 21:30:59 2022 -0300
+
+    Added README.md
+
+[33mcommit d36841b1f20ec7432eac50267e1bc5188f6c0e42[m
+Author: Leonardo Victor Soares Medeiros <leovictorcvo@gmail.com>
+Date:   Tue Mar 29 21:27:10 2022 -0300
+
+    Initial config

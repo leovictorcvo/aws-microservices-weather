@@ -2,7 +2,7 @@
 
 namespace CloudWeather.Temperature.DataAccess
 {
-    public class TemperatureDbContext: DbContext
+    public class TemperatureDbContext : DbContext
     {
         public TemperatureDbContext() {}
         public TemperatureDbContext(DbContextOptions opts):base(opts) { }
